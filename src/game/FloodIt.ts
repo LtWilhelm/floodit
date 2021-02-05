@@ -35,8 +35,16 @@ export class FloodIt {
         const cell = document.createElement('div');
         cell.id = `${c.posX},${c.posY}`;
         cell.style.backgroundColor = c.color.getColorString();
+        cell.addEventListener('mouseup', c.onClick);
         el.appendChild(cell);
       });
     });
+  }
+
+  chooseColor = (color: RGB) => {
+    const first = this.rows[0][0];
+    if (!first.color.isEqual(color)) {
+      first.changeColor(color);
+    }
   }
 }

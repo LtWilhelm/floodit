@@ -10,7 +10,6 @@ body {
 
 #container {
   place-self: center;
-
   /* background-color: green; */
 }
 
@@ -19,4 +18,9 @@ body {
   padding: 15px;
   border-radius: 15px;
   box-shadow: #202020 10px 10px 10px, #272727 -10px -10px 10px;
+}
+
+#game div {
+  cursor: pointer;
+  transition: .3s;
 }
