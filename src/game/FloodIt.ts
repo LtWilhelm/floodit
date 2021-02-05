@@ -18,14 +18,40 @@ export class FloodIt {
       }
       this.rows.push(row);
     }
+
+    this.statusField = document.querySelector('status');
+    this.victoryField = document.querySelector('victory');
+    this.turnLimit = (((this.size - 2) / 4) * 7) + 3;
   }
+
+  statusField: HTMLElement;
+  victoryField: HTMLElement;
 
   rows: row[];
   size: number;
 
   availColors: RGB[];
 
-  checkWin = () => this.rows.every(r => r[0].color.isEqual(this.rows[0][0].color) && r.every(c => c.color.isEqual(r[0].color)));
+  score: number = 0;
+  turn: number = 0;
+  turnLimit: number;
+
+  turnInProgress: boolean;
+  hasLost: boolean;
+
+  renderTurn = () => {
+    this.statusField.innerText = `${this.turn}/${this.turnLimit}`
+  }
+
+  checkWin = () => {
+    let hasWon = this.rows.every(r => r[0].color.isEqual(this.rows[0][0].color) && r.every(c => c.color.isEqual(r[0].color)));
+    if (this.turn >= this.turnLimit) {
+      this.victoryField.innerText = 'ALL YOUR BASE ARE BELONG TO ME';
+      this.hasLost = true;
+    } else if (hasWon && !this.hasLost) {
+      this.victoryField.innerText = 'A WINNER IS YOU';
+    }
+  }
 
   mount = (id: string) => {
     const el = document.getElementById(id);
@@ -39,12 +65,18 @@ export class FloodIt {
         el.appendChild(cell);
       });
     });
+    this.renderTurn();
   }
 
   chooseColor = (color: RGB) => {
-    const first = this.rows[0][0];
-    if (!first.color.isEqual(color)) {
-      first.changeColor(color);
+    if (!this.turnInProgress) {
+      const first = this.rows[0][0];
+      if (!first.color.isEqual(color)) {
+        this.turnInProgress = true;
+        first.changeColor(color);
+        this.turn++;
+        this.renderTurn();
+      }
     }
   }
 }
