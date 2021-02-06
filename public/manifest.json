@@ -1,0 +1,9 @@
+{
+  "name": "Tile Flood",
+  "short_name": "Tile Flood",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A readable Hacker News app.",
+  "icons": []
+}
