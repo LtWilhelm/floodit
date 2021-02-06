@@ -1,7 +1,7 @@
 {
   "name": "Tile Flood",
   "short_name": "Tile Flood",
-  "start_url": "./floodit/",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#232323",
   "description": "Play da game.",
