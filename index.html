@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Flood It 2.0</title>
-    </head>
-    <body>
-      <div id="container">
-        <h1>Flood It</h1>
-        <div>
-          <select name="gameSize">
-            <option value="2">2x2</option>
-            <option value="6">6x6</option>
-            <option value="10">10x10</option>
-            <option selected="true" value="14">14x14</option>
-            <option value="18">18x18</option>
-            <option value="22">22x22</option>
-            <option value="26">26x26</option>
-          </select>
-          <select name="colorCount">
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option selected="true" value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-          <button>New Game</button>
-        </div>
-        <div id="game"></div>
-        <status></status>
-        <victory></victory>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Flood It 2.0</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Flood It</h1>
+    <div style="margin-bottom: 10px;">
+      <div class="select">
+        <select name="gameSize">
+          <option value="2">2x2</option>
+          <option value="6">6x6</option>
+          <option value="10">10x10</option>
+          <option selected="true" value="14">14x14</option>
+          <option value="18">18x18</option>
+          <option value="22">22x22</option>
+          <option value="26">26x26</option>
+        </select>
       </div>
-    </body>
+      <div class="select">
+        <select name="colorCount">
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option selected="true" value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <button>New Game</button>
+    </div>
+    <div id="game"></div>
+    <status></status>
+    <victory></victory>
+  </div>
+</body>
+
 </html>
