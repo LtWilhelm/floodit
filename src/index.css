@@ -66,6 +66,7 @@ select {
   display: inline;
   padding-right: 9px;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .select::after {
