@@ -4,12 +4,14 @@
   "start_url": ".",
   "display": "standalone",
   "background_color": "#232323",
+  "theme_color": "#232323",
   "description": "Play da game.",
   "icons": [
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512X512"
+      "sizes": "512X512",
+      "purpose": "any maskable"
     }
   ]
 }
