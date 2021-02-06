@@ -55,6 +55,7 @@ export class FloodIt {
 
   mount = (id: string) => {
     const el = document.getElementById(id);
+    el.innerHTML = '';
     el.setAttribute("style", `grid-template-columns: repeat(${this.size}, 2em);grid-template-rows: repeat(${this.size}, 2em);`);
     this.rows.forEach(r => {
       r.forEach(c => {
