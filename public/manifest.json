@@ -7,7 +7,7 @@
   "description": "Play da game.",
   "icons": [
     {
-      "src": "public/logo512.png",
+      "src": "logo512.png",
       "type": "image/png",
       "sizes": "512X512"
     }
