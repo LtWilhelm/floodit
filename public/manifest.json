@@ -5,5 +5,11 @@
   "display": "standalone",
   "background_color": "#232323",
   "description": "Play da game.",
-  "icons": []
+  "icons": [
+    {
+      "src": "public/logo512.png",
+      "type": "image/png",
+      "sizes": "512X512"
+    }
+  ]
 }
